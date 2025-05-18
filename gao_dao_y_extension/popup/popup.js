@@ -169,17 +169,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. 打开新的详情HTML页面
         if (currentGuaDataForStorage.fileNameBase) {
             const detailUrl = chrome.runtime.getURL(`assets/html_combined/${currentGuaDataForStorage.fileNameBase}_combined.html`);
-            chrome.tabs.create({ url: detailUrl }, (tab) => {
-                if (chrome.runtime.lastError) {
-                    console.error('[Popup] 打开详情页失败:', chrome.runtime.lastError.message);
-                    alert(`打开详情页失败: ${chrome.runtime.lastError.message}`);
-                } else {
-                    console.log('[Popup] 已在新标签页打开详情页:', detailUrl);
-                }
-                // 恢复按钮状态
-                btnViewDetails.textContent = '查看卦象详解';
-                btnViewDetails.disabled = false;
-            });
+            // 使用window.open替代chrome.tabs.create，无需tabs权限
+            window.open(detailUrl, '_blank');
+            console.log('[Popup] 已在新标签页打开详情页:', detailUrl);
+            // 恢复按钮状态
+            btnViewDetails.textContent = '查看卦象详解';
+            btnViewDetails.disabled = false;
         } else {
             console.error('[Popup] 无法打开详情页，缺少 fileNameBase。');
             alert('无法打开详情页，缺少卦象文件名信息。');
