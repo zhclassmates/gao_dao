@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高岛易断起卦</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>高岛易断</h1>
+            <div class="steps">
+                <div class="step active" id="step-gender">性别</div>
+                <div class="step-arrow">➡️</div>
+                <div class="step" id="step-numbers">数字</div>
+                <div class="step-arrow">➡️</div>
+                <div class="step" id="step-result-preview">结果</div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Step 1: Gender Selection -->
+            <section id="gender-selection-section" class="active-section">
+                <h2>请选择性别：</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" checked> 男</label>
+                    <label><input type="radio" name="gender" value="female"> 女</label>
+                </div>
+                <button id="btn-to-numbers">下一步</button>
+                
+                <div style="text-align: center; margin-top: 15px; font-size: 14px;">
+                    <a href="/guide.html" target="_blank" style="color: #0078d7; text-decoration: none; margin: 0 10px;">使用指导</a>
+                    <span style="color: #ccc;">|</span>
+                    <a href="mailto:contact@gaodaoyi.com" style="color: #0078d7; text-decoration: none; margin: 0 10px;">联系作者</a>
+                </div>
+            </section>
+
+            <!-- Step 2: Number Input -->
+            <section id="number-input-section">
+                <h2 id="number-input-title">男性请输入：左手为上卦，右手为下卦</h2>
+                <div class="input-group">
+                    <label for="input-num1">左手数字：</label>
+                    <input type="number" id="input-num1" min="0">
+                    <p class="hint">将除以8取余作为上卦</p>
+                </div>
+                <div class="input-group">
+                    <label for="input-num2">右手数字：</label>
+                    <input type="number" id="input-num2" min="0">
+                    <p class="hint">将除以8取余作为下卦</p>
+                </div>
+                <div class="input-group">
+                    <label for="input-num3">动爻数字：</label>
+                    <input type="number" id="input-num3" min="1" max="600">
+                    <p class="hint">将除以6取余作为动爻 (1-6)</p> <!-- 通常输入原始数字，程序处理取模 -->
+                </div>
+                <div class="button-group">
+                    <button id="btn-back-to-gender">上一步</button>
+                    <button id="btn-calculate">计算卦象</button>
+                </div>
+            </section>
+
+            <!-- Step 3: Result Preview (Optional, as per image 3) -->
+            <section id="result-preview-section">
+                <h2>计算结果</h2>
+                <div class="result-item">
+                    <span class="label">上卦编号：</span>
+                    <span id="preview-shang-gua"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">下卦编号：</span>
+                    <span id="preview-xia-gua"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">动爻位置：</span>
+                    <span id="preview-dong-yao"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">卦象名称：</span>
+                    <span id="preview-gua-xiang"></span>
+                </div>
+                <div class="button-group">
+                     <button id="btn-back-to-numbers">上一步</button>
+                    <!-- This button's action will be to store data and potentially close popup or navigate -->
+                    <button id="btn-view-details">查看卦象详解</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../utils/calculation_logic.js"></script> <!-- Placeholder, might need to adjust path or how it's used -->
+    <script src="../assets/data/trigrams.js"></script>
+    <script src="../assets/data/hexagram_map.js"></script>
+    <script src="../assets/data/gua_link_parsed.js"></script> <!-- Placeholder for parsed CSV data -->
+    <script src="popup.js"></script>
+</body>
+</html> 

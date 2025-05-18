@@ -1,0 +1,163 @@
+// 图片路径修复脚本 - 适用于Chrome扩展环境
+// 用于自动修复HTML文件中的图片路径问题
+
+// 图片路径修复函数
+function fixImagePaths() {
+  const images = document.querySelectorAll('img');
+  let fixedCount = 0;
+  
+  console.log(`准备修复图片路径，找到 ${images.length} 个图片元素`);
+  
+  images.forEach(img => {
+    const src = img.getAttribute('src');
+    
+    // 跳过已经正确的图片
+    if (!src || src.startsWith('chrome-extension://') || src.startsWith('http')) {
+      return;
+    }
+    
+    // 保存原始路径用于调试
+    img.setAttribute('data-original-src', src);
+    
+    // 构建新路径
+    let newSrc = '';
+    
+    // 路径修复逻辑
+    try {
+      // 尝试使用标准API获取URL
+      newSrc = chrome.runtime.getURL(src);
+    } catch (error) {
+      try {
+        // 尝试使用扩展ID
+        const extensionId = chrome.runtime.id || '__MSG_@@extension_id__';
+        newSrc = `chrome-extension://${extensionId}/${src}`;
+      } catch (innerError) {
+        // 最后的降级方案，使用通配符
+        newSrc = `chrome-extension://__MSG_@@extension_id__/${src}`;
+      }
+    }
+    
+    // 处理hexagram_book前缀(如果有)，因为实际路径直接在hexagram_images下
+    if (newSrc.includes('hexagram_book/hexagram_images')) {
+      // 移除hexagram_book前缀
+      newSrc = newSrc.replace('/hexagram_book/hexagram_images/', '/hexagram_images/');
+    }
+    
+    // 确保路径中没有多余的斜杠
+    newSrc = newSrc.replace(/([^:])\/+/g, '$1/');
+    
+    // 设置新的图片路径
+    console.log(`修复图片路径: ${src} -> ${newSrc}`);
+    img.setAttribute('src', newSrc);
+    fixedCount++;
+  });
+  
+  console.log(`成功修复了 ${fixedCount}/${images.length} 个图片路径`);
+  return fixedCount;
+}
+
+// 添加图片加载错误处理函数
+function addImageErrorHandlers() {
+  const images = document.querySelectorAll('img');
+  
+  images.forEach(img => {
+    if (!img.hasAttribute('data-error-handler-added')) {
+      img.setAttribute('data-error-handler-added', 'true');
+      
+      img.onerror = function() {
+        const src = img.getAttribute('src');
+        console.error(`图片加载失败: ${src}`);
+        
+        // 尝试替代路径
+        let alternativeSrc = '';
+        
+        if (src.includes('hexagram_book/hexagram_images')) {
+          // 移除hexagram_book前缀
+          alternativeSrc = src.replace('/hexagram_book/hexagram_images/', '/hexagram_images/');
+        } else if (src.includes('hexagram_images') && !src.includes('/hexagram_images/')) {
+          // 修复路径格式
+          const parts = src.split('hexagram_images');
+          alternativeSrc = `${parts[0]}hexagram_images/${parts[1]}`;
+        }
+        
+        if (alternativeSrc && alternativeSrc !== src) {
+          console.log(`尝试替代路径: ${alternativeSrc}`);
+          img.setAttribute('src', alternativeSrc);
+        }
+      };
+    }
+  });
+}
+
+// 使用MutationObserver监控DOM变化，处理动态添加的图片元素
+function setupMutationObserver() {
+  if (typeof MutationObserver === 'function') {
+    const observer = new MutationObserver(function(mutations) {
+      let needsFixing = false;
+      
+      mutations.forEach(function(mutation) {
+        // 检查新添加的节点
+        if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+          for (let i = 0; i < mutation.addedNodes.length; i++) {
+            const node = mutation.addedNodes[i];
+            
+            // 如果是元素节点
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              // 检查是否是图片元素
+              if (node.tagName === 'IMG') {
+                needsFixing = true;
+              }
+              // 检查子元素中是否有图片
+              else if (node.querySelectorAll) {
+                const imgs = node.querySelectorAll('img');
+                if (imgs.length > 0) {
+                  needsFixing = true;
+                }
+              }
+            }
+          }
+        }
+      });
+      
+      // 如果有图片元素添加，修复路径
+      if (needsFixing) {
+        fixImagePaths();
+        addImageErrorHandlers();
+      }
+    });
+    
+    // 监控整个文档的变化
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+    
+    console.log('已设置DOM变化监控');
+  }
+}
+
+// 初始化函数
+function initialize() {
+  console.log('初始化图片路径修复');
+  
+  // 修复当前页面上的图片路径
+  const fixedCount = fixImagePaths();
+  
+  // 添加错误处理
+  addImageErrorHandlers();
+  
+  // 设置监控
+  setupMutationObserver();
+  
+  // 诊断信息
+  console.log(`图片路径修复完成，已处理 ${fixedCount} 个图片`);
+}
+
+// 根据文档加载状态执行初始化
+if (document.readyState === 'loading') {
+  console.log('文档正在加载，等待DOMContentLoaded事件');
+  document.addEventListener('DOMContentLoaded', initialize);
+} else {
+  console.log('文档已加载，立即执行初始化');
+  initialize();
+} 

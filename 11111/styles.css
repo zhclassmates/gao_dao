@@ -1,0 +1,1296 @@
+body {
+  font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-size: 16px;
+}
+
+.container {
+  width: 360px;
+  min-width: 360px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 10px 0 5px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  color: #ff4d4f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 步骤指示器样式 */
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.step-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.step.active {
+  background-color: #66cc66;
+  color: white;
+}
+
+.step.completed {
+  background-color: #66cc66;
+  color: white;
+}
+
+/* 步骤内容样式 */
+.step-content {
+  display: none;
+  padding: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.step-content.active {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.gender-selection {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radio-group.large {
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.radio-group.large label {
+  font-size: 18px;
+  padding: 5px 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-group small {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66cc66;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #55bb55;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.prev-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.prev-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.next-btn {
+  background-color: #66cc66;
+}
+
+.next-btn:hover {
+  background-color: #55bb55;
+}
+
+.calculate-btn {
+  background-color: #4285f4;
+  color: white;
+}
+
+.calculate-btn:hover {
+  background-color: #3b78e7;
+}
+
+.secondary-btn {
+  background-color: #f0f0f0;
+  color: #666;
+  margin-top: 10px;
+}
+
+.secondary-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* 计算结果样式 */
+.calculation-result {
+  background-color: #f5f9ff;
+  border: 1px solid #e0e9f5;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calculation-result h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #e0e9f5;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  flex: 1;
+}
+
+.prev-btn {
+  background-color: #f1f1f1;
+  color: #555;
+}
+
+.primary-btn {
+  background-color: #4285f4;
+  color: white;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background-color: #3b78e7;
+}
+
+/* 结果行样式 */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  min-height: 24px;
+}
+
+.result-row span:first-child {
+  font-weight: bold;
+  color: #333;
+  flex: 0 0 100px;
+}
+
+.result-row span:nth-child(2) {
+  color: #555;
+  flex: 1;
+}
+
+/* 信息文本样式 */
+.info-text {
+  color: #4a76a8;
+  margin-left: 10px;
+  font-size: 16px;
+  flex: 1;
+}
+
+/* 卦象信息区样式 */
+.hexagram-info {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hexagram-details h3 {
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.hexagram-name-section, .hexagram-meaning-section, .hexagram-explanation-section, .hexagram-yao-section {
+  margin-bottom: 15px;
+}
+
+.hexagram-name-section p, .hexagram-meaning-section p, .hexagram-explanation-section p, .hexagram-yao-section p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.hexagram-details-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.hexagram-details-btn:hover {
+  background-color: #3367d6;
+}
+
+.extended-details-container {
+  margin-top: 15px;
+}
+
+.explanation-section {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.explanation-section h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.explanation-section p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.explanation-section:last-child {
+  margin-bottom: 0;
+}
+
+/* 卦象详情容器样式 */
+.hexagram-details-container {
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.hexagram-details-container .hexagram-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.hexagram-details-container .hexagram-title {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.hexagram-details-container .hexagram-full-name {
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.hexagram-details-container .trigram-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.hexagram-details-container .trigram-item {
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.hexagram-details-container .change-yao-section {
+  background-color: #fff8e1;
+  border-left: 3px solid #ffc107;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.hexagram-details-container .hexagram-image-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hexagram-details-container .hexagram-image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#result-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+#result-container.loading {
+  opacity: 0.7;
+}
+
+#result-content {
+  margin-bottom: 15px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.tab-btn {
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+}
+
+.tab-btn.active {
+  color: #66cc66;
+  border-bottom: 2px solid #66cc66;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 300px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.footer {
+  display: none;
+}
+
+#forgot-btn, #manual-input-btn {
+  display: none;
+}
+
+/* 注解内容的样式 */
+.annotation-content {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 0.9em;
+}
+
+.annotation-content p {
+  margin-bottom: 10px;
+}
+
+/* 确保离线内容有良好的格式 */
+#traditional-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* 分栏详细展示 */
+.split-view {
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.split-left {
+  flex: 0 0 160px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-right: 1px solid #eee;
+  overflow: hidden;
+}
+
+.split-right {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  min-height: 450px;
+}
+
+.section-title {
+  padding: 10px;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 18px;
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.scrollable-content p, 
+.scrollable-content div,
+.hexagram-sections .section,
+#yao-explanation, 
+#book-yao-content,
+.hexagram-basic-info p,
+.trigram-info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hexagram-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.hexagram-images {
+  display: flex;
+  gap: 10px;
+  margin-right: 15px;
+}
+
+.hexagram-images img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.hexagram-sections .section {
+  margin-bottom: 20px;
+}
+
+.hexagram-sections h4 {
+  color: #4a76a8;
+  margin-bottom: 8px;
+  font-size: 18px;
+  border-left: 3px solid #4a76a8;
+  padding-left: 8px;
+}
+
+/* 动态内容部分 */
+.dynamic-content {
+  background-color: rgba(250, 250, 210, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px dashed #e0e0e0;
+  min-height: 100px;
+}
+
+/* 爻辞展示 */
+.yao-item {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.yao-item:last-child {
+  border-bottom: none;
+}
+
+.yao-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.yao-content {
+  line-height: 1.5;
+}
+
+/* 动爻高亮样式 */
+.active-yao {
+  background-color: rgba(255, 255, 0, 0.1);
+  border-left: 3px solid #ffd700;
+  padding-left: 12px;
+  margin-left: -12px;
+  border-radius: 3px;
+}
+
+.active-yao .yao-title {
+  color: #d4721b;
+  font-weight: bold;
+}
+
+/* 移动设备响应式布局 */
+@media (max-width: 600px) {
+  .split-view {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .split-left, .split-right {
+    height: 400px;
+  }
+  
+  .split-left {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+/* 添加卦象相关样式 */
+.hexagram-summary {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #4caf50;
+}
+
+.hexagram-summary p {
+  margin: 8px 0;
+}
+
+.view-detail-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-detail-link:hover {
+  background-color: #3e8e41;
+}
+
+.no-content-message {
+  color: #888;
+  font-style: italic;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 3px solid #ccc;
+}
+
+.no-content-message a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.no-content-message a:hover {
+  text-decoration: underline;
+}
+
+.hexagram-header h2 {
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 5px;
+}
+
+.hexagram-title p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.section h3 {
+  color: #4caf50;
+  border-left: 3px solid #4caf50;
+  padding-left: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* 增强标签样式 */
+.tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  padding: 8px 15px;
+  margin-right: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* 增强动爻展示 */
+.dynamic-content {
+  background-color: #f0f8f0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+#yao-explanation, #book-yao-content {
+  line-height: 1.6;
+}
+
+/* 添加查看完整卦象链接的样式 */
+.view-full-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.view-full-link a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-full-link a:hover {
+  background-color: #45a049;
+  text-decoration: none;
+}
+
+.view-full-button {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.full-view-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.full-view-btn:hover {
+  background-color: #303f9f;
+  text-decoration: none;
+}
+
+/* 改进无内容消息的显示 */
+.no-content-message {
+  background-color: #fff8e1;
+  border-left: 4px solid #ffb300;
+  padding: 10px 15px;
+  margin: 10px 0;
+  color: #5d4037;
+}
+
+.no-content-message a {
+  color: #0d47a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.no-content-message a:hover {
+  text-decoration: underline;
+}
+
+/* 添加卦象卡片样式 */
+.hexagram-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.hexagram-title {
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hexagram-index {
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hexagram-basic-info {
+  margin-bottom: 20px;
+}
+
+.upper-trigram, .lower-trigram, .change-yao {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.upper-trigram {
+  background-color: #e7f5fe;
+  border-left: 3px solid #2196F3;
+}
+
+.lower-trigram {
+  background-color: #e7fff0;
+  border-left: 3px solid #4CAF50;
+}
+
+.change-yao {
+  background-color: #fff8e1;
+  border-left: 3px solid #FFC107;
+}
+
+.hexagram-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-button, .secondary-button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.action-button {
+  background-color: #4285f4;
+  color: white;
+  flex: 2;
+  margin-right: 10px;
+}
+
+.secondary-button {
+  background-color: #f1f1f1;
+  color: #333;
+  flex: 1;
+}
+
+.action-button:hover {
+  background-color: #3367d6;
+}
+
+.secondary-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* 详细页面样式 */
+.hexagram-detailed-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hexagram-meaning, .hexagram-explanation, .hexagram-yao-detail, .hexagram-book {
+  margin-bottom: 20px;
+}
+
+.hexagram-meaning {
+  background-color: #f0f8ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.hexagram-explanation h3, .hexagram-yao-detail h3, .hexagram-book h3 {
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.book-section {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.book-section h4 {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.hexagram-yao-detail {
+  background-color: #fff8e1;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #FFC107;
+}
+
+/* 增大标题字体 */
+h4, .section h4, .hexagram-sections h4 {
+  font-size: 18px;
+}
+
+/* 增大卡片内容字体 */
+.hexagram-card {
+  font-size: 16px;
+}
+
+/* 增大跳转后HTML文件的字体 */
+#traditional-content, 
+#detailed-content, 
+#gpt-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 特别针对详细内容面板的调整 */
+#website-content, #book-content {
+  font-size: 16px;
+}
+
+/* 标签内的内容和各种卦象解释 */
+.section p, .annotation-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* 扩展卦象信息样式 */
+.extended-hexagram-info {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.extended-content {
+  margin-bottom: 10px;
+}
+
+.explanation-section {
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.explanation-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.explanation-section h3 {
+  color: #4a76a8;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-left: 3px solid #4a76a8;
+  padding-left: 8px;
+}
+
+.explanation-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.yao-explanation {
+  background-color: #fff8e1;
+  border-radius: 6px;
+  padding: 10px;
+  border-left: 3px solid #ffc107;
+}
+
+.book-yao-explanation {
+  background-color: #e8f5e9;
+  border-radius: 6px;
+  padding: 10px;
+  border-left: 3px solid #4caf50;
+}
+
+/* 第一卦信息卡片特定样式 */
+#first-hexagram-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#first-hexagram-container .hexagram-title {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#first-hexagram-container .hexagram-index {
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+#first-hexagram-container .upper-trigram,
+#first-hexagram-container .lower-trigram {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#first-hexagram-container .upper-trigram {
+  background-color: #e7f5fe;
+  border-left: 3px solid #2196F3;
+}
+
+#first-hexagram-container .lower-trigram {
+  background-color: #e7fff0;
+  border-left: 3px solid #4CAF50;
+}
+
+#first-hexagram-container .change-yao {
+  background-color: #fff8e1;
+  border-left: 3px solid #FFC107;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#first-hexagram-container .change-yao p {
+  margin: 5px 0;
+}
+
+#first-hexagram-container .hexagram-meaning {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#first-hexagram-container .hexagram-buttons {
+  text-align: center;
+}
+
+#view-detail-btn {
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#view-detail-btn:hover {
+  background-color: #3367d6;
+}
+
+.result-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  align-items: center;
+  padding: 8px;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+}
+
+.result-row:last-child {
+  margin-bottom: 0;
+}
+
+.result-row span:first-child {
+  width: 80px;
+  font-weight: bold;
+  color: #333;
+}
+
+.result-row span:nth-child(2) {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+/* 防止闪烁的关键CSS */
+#result-container {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+#result-container.loading {
+  opacity: 0.7;
+}
+
+/* 禁用动画期间的过渡效果 */
+.no-transition {
+  transition: none !important;
+}
+
+/* 加载中提示样式 */
+.loading-text {
+  text-align: center;
+  color: #666;
+  padding: 10px;
+  font-style: italic;
+}
+
+/* 错误消息样式 */
+.error-message {
+  color: #e74c3c;
+  padding: 10px;
+  background-color: #fadbd8;
+  border-left: 4px solid #e74c3c;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* 改进内容区域样式，防止内容变化导致布局闪烁 */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  min-height: 24px;
+}
+
+.result-row span:first-child {
+  font-weight: bold;
+  color: #333;
+  flex: 0 0 100px;
+}
+
+.result-row span:nth-child(2) {
+  color: #555;
+  flex: 1;
+}
+
+/* 标签页内容的最小高度，防止切换时的跳动 */
+.tab-content {
+  min-height: 300px;
+}
+
+/* 预览图容器，防止占位符闪烁 */
+.hexagram-preview {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.hexagram-preview-image {
+  transition: opacity 0.3s ease;
+}
+
+/* 避免分屏区域大小变化 */
+.split-view {
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  overflow: hidden;
+}
+
+.split-left {
+  flex: 0 0 160px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-right: 1px solid #eee;
+  overflow: hidden;
+}
+
+.split-right {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  min-height: 450px;
+}
+
+/* 改进动态内容区域，防止内容变化导致布局跳动 */
+.dynamic-content {
+  min-height: 100px;
+}
+
+/* 内容节的最小高度 */
+.section {
+  margin-bottom: 15px;
+  min-height: 50px;
+}
+
+/* 设置最小高度，防止内容变化导致布局跳动 */
+#hexagram-title {
+  min-height: 60px;
+}
+
+#hexagram-images {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 移除底部按钮样式 */
+.footer {
+  display: none;
+}
+
+#manual-input-btn, 
+#forgot-btn {
+  display: none;
+}
+
+/* 加载状态动画 */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.loading-placeholder {
+  animation: pulse 1.5s infinite;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: transparent;
+} 

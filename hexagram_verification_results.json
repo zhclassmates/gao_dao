@@ -1,0 +1,903 @@
+{
+  "total_files": 64,
+  "files_with_issues": [
+    {
+      "file": "hexagram_51_combined.html",
+      "hexagram_id": "51",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_46_combined.html",
+      "hexagram_id": "46",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_42_combined.html",
+      "hexagram_id": "42",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_55_combined.html",
+      "hexagram_id": "55",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_18_combined.html",
+      "hexagram_id": "18",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_36_combined.html",
+      "hexagram_id": "36",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_21_combined.html",
+      "hexagram_id": "21",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_25_combined.html",
+      "hexagram_id": "25",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_32_combined.html",
+      "hexagram_id": "32",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_22_combined.html",
+      "hexagram_id": "22",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_35_combined.html",
+      "hexagram_id": "35",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_08_combined.html",
+      "hexagram_id": "08",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_31_combined.html",
+      "hexagram_id": "31",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_26_combined.html",
+      "hexagram_id": "26",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_45_combined.html",
+      "hexagram_id": "45",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_52_combined.html",
+      "hexagram_id": "52",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_56_combined.html",
+      "hexagram_id": "56",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_41_combined.html",
+      "hexagram_id": "41",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_61_combined.html",
+      "hexagram_id": "61",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_58_combined.html",
+      "hexagram_id": "58",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_15_combined.html",
+      "hexagram_id": "15",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_02_combined.html",
+      "hexagram_id": "02",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_06_combined.html",
+      "hexagram_id": "06",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_11_combined.html",
+      "hexagram_id": "11",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_28_combined.html",
+      "hexagram_id": "28",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_01_combined.html",
+      "hexagram_id": "01",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_16_combined.html",
+      "hexagram_id": "16",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_38_combined.html",
+      "hexagram_id": "38",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_12_combined.html",
+      "hexagram_id": "12",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_05_combined.html",
+      "hexagram_id": "05",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_48_combined.html",
+      "hexagram_id": "48",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_62_combined.html",
+      "hexagram_id": "62",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_04_combined.html",
+      "hexagram_id": "04",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_13_combined.html",
+      "hexagram_id": "13",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_39_combined.html",
+      "hexagram_id": "39",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_17_combined.html",
+      "hexagram_id": "17",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_63_combined.html",
+      "hexagram_id": "63",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_49_combined.html",
+      "hexagram_id": "49",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_59_combined.html",
+      "hexagram_id": "59",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_60_combined.html",
+      "hexagram_id": "60",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_64_combined.html",
+      "hexagram_id": "64",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_29_combined.html",
+      "hexagram_id": "29",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_10_combined.html",
+      "hexagram_id": "10",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_07_combined.html",
+      "hexagram_id": "07",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_03_combined.html",
+      "hexagram_id": "03",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_14_combined.html",
+      "hexagram_id": "14",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_27_combined.html",
+      "hexagram_id": "27",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_30_combined.html",
+      "hexagram_id": "30",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_09_combined.html",
+      "hexagram_id": "09",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_34_combined.html",
+      "hexagram_id": "34",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_23_combined.html",
+      "hexagram_id": "23",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_40_combined.html",
+      "hexagram_id": "40",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_57_combined.html",
+      "hexagram_id": "57",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_53_combined.html",
+      "hexagram_id": "53",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_44_combined.html",
+      "hexagram_id": "44",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_54_combined.html",
+      "hexagram_id": "54",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_43_combined.html",
+      "hexagram_id": "43",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_47_combined.html",
+      "hexagram_id": "47",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_50_combined.html",
+      "hexagram_id": "50",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_33_combined.html",
+      "hexagram_id": "33",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_24_combined.html",
+      "hexagram_id": "24",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_20_combined.html",
+      "hexagram_id": "20",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_37_combined.html",
+      "hexagram_id": "37",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    },
+    {
+      "file": "hexagram_19_combined.html",
+      "hexagram_id": "19",
+      "missing_positions": [
+        "1",
+        "4",
+        "2",
+        "6",
+        "3",
+        "5",
+        "7"
+      ],
+      "found_positions": []
+    }
+  ],
+  "yao_id_missing": [],
+  "pattern_mismatch": []
+}

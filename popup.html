@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>高岛易断</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- 图片路径修复脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('正在初始化图片处理...');
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1>高岛易断</h1>
+      <div class="title-overlay"></div>
+    </div>
+
+    <div id="welcome-container">
+      <div class="step-indicator">
+        <div class="step active" data-step="1">性别</div>
+        <div class="step" data-step="2">数字</div>
+        <div class="step" data-step="3">结果</div>
+      </div>
+
+      <!-- 步骤1：选择性别 -->
+      <div id="step-1" class="step-content active">
+        <h3>请选择性别：</h3>
+        <div class="gender-selection">
+          <div class="radio-group large">
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">女</label>
+          </div>
+        </div>
+        <button id="next-step-1" class="next-btn">下一步</button>
+      </div>
+
+      <!-- 步骤2：输入数字 -->
+      <div id="step-2" class="step-content">
+        <h3 id="hand-instruction">男性请输入：左手为上卦，右手为下卦</h3>
+        <div class="input-group">
+          <label id="first-hand-label" for="first-hand">左手数字：</label>
+          <input type="number" id="first-hand" min="1" required>
+          <small>将除以8取余作为上卦</small>
+        </div>
+        <div class="input-group">
+          <label id="second-hand-label" for="second-hand">右手数字：</label>
+          <input type="number" id="second-hand" min="1" required>
+          <small>将除以8取余作为下卦</small>
+        </div>
+        <div class="input-group">
+          <label id="third-hand-label" for="third-hand">左手数字（动爻）：</label>
+          <input type="number" id="third-hand" min="1" required>
+          <small>将除以6取余作为动爻</small>
+        </div>
+        <div class="button-group">
+          <button id="prev-step-2" class="prev-btn">上一步</button>
+          <button id="calculate-btn" class="calculate-btn">计算卦象</button>
+        </div>
+      </div>
+
+      <!-- 步骤3：展示计算结果 -->
+      <div id="step-3" class="step-content">
+        <div class="calculation-result">
+          <h3>计算结果</h3>
+          <div class="result-row" id="upper-gua-result">
+            <strong>上卦:</strong> <span class="info-text">--</span>
+          </div>
+          <div class="result-row" id="lower-gua-result">
+            <strong>下卦:</strong> <span class="info-text">--</span>
+          </div>
+          <div class="result-row" id="change-line-result">
+            <strong>动爻:</strong> <span class="info-text">--</span>
+          </div>
+          <div class="result-row" id="hexagram-name-result">
+            <strong>卦象:</strong> <span class="info-text">--</span>
+          </div>
+          <div id="hexagram-preview-container" class="hexagram-preview">
+            <!-- 卦象预览图将在JS中动态插入 -->
+          </div>
+        </div>
+        <div class="btn-group">
+          <button id="prev-step-3" class="btn prev-btn">上一步</button>
+          <button id="show-interpretation" class="btn primary-btn">查看卦象详解</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 卦象解释容器 -->
+    <div id="result-container" style="display: none;">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="detailed-content">详细解释</button>
+        <button class="tab-btn" data-tab="traditional-content">传统解释</button>
+        <button class="tab-btn" data-tab="gpt-content">现代解读</button>
+      </div>
+      
+      <div id="result-content">
+        <!-- 详细解释标签页 -->
+        <div id="detailed-content" class="tab-content active">
+          <div class="split-view">
+            <div class="split-left">
+              <!-- 卦象图片和基本信息 -->
+              <div class="hexagram-header">
+                <div id="hexagram-title"></div>
+                <div id="hexagram-images" class="hexagram-images"></div>
+              </div>
+            </div>
+            <div class="split-right">
+              <!-- 卦辞、象辞等内容 -->
+              <div class="scrollable-content">
+                <div class="section">
+                  <h4>卦辞</h4>
+                  <div id="gua-ci-original"></div>
+                </div>
+                <div class="section">
+                  <h4>象辞</h4>
+                  <div id="xiang-ci-text"></div>
+                </div>
+                <div class="section">
+                  <h4>白话解释</h4>
+                  <div id="plain-text-explanation"></div>
+                </div>
+                <div class="section">
+                  <h4>传统解释</h4>
+                  <div id="traditional-explanation"></div>
+                </div>
+                <div class="section">
+                  <h4>爻辞解释</h4>
+                  <div id="yao-explanation" class="dynamic-content"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      
+      <button id="back-to-input" class="btn secondary-btn">返回输入</button>
+    </div>
+  </div>
+
+  <!-- 引入JavaScript文件 -->
+  <script src="js/hexagram_data.js"></script>
+  <script src="js/image_loader.js"></script>
+  <script src="js/hexagram_data_processor.js"></script>
+  <script src="js/image_fixer.js"></script>
+  <script src="js/hexagram_controller.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,253 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  width: 400px;
+  min-height: 500px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #e60000;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+/* 步骤指示器 */
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #999;
+  position: relative;
+}
+
+.step.active {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.step.active:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: #e60000;
+}
+
+/* 步骤内容 */
+.step-content {
+  display: none;
+  padding: 10px 0;
+}
+
+.step-content.active {
+  display: block;
+}
+
+/* 表单元素 */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group small {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* 性别选择 */
+.gender-selection {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.radio-group {
+  display: inline-flex;
+  background: #f5f5f5;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.radio-group.large input[type="radio"] {
+  display: none;
+}
+
+.radio-group.large label {
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.radio-group.large input[type="radio"]:checked + label {
+  background-color: #e60000;
+  color: white;
+}
+
+/* 按钮 */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn, button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.next-btn, .calculate-btn, .primary-btn {
+  background-color: #e60000;
+  color: white;
+}
+
+.next-btn:hover, .calculate-btn:hover, .primary-btn:hover {
+  background-color: #cc0000;
+}
+
+.prev-btn, .secondary-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.prev-btn:hover, .secondary-btn:hover {
+  background-color: #e9e9e9;
+}
+
+/* 结果显示 */
+.calculation-result {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.result-row {
+  margin-bottom: 10px;
+}
+
+.info-text {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.hexagram-preview {
+  text-align: center;
+  margin-top: 15px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+/* 卦象详解页面样式 */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  border-bottom: 2px solid #e60000;
+  color: #e60000;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.split-view {
+  display: flex;
+}
+
+.split-left {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.split-right {
+  flex: 2;
+}
+
+.scrollable-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h4 {
+  color: #e60000;
+  border-left: 3px solid #e60000;
+  padding-left: 10px;
+  margin-bottom: 10px;
+} 
