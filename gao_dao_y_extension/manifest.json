@@ -23,8 +23,6 @@
     {
       "resources": [
         "assets/html_combined/*.html",
-        "assets/images/wechat_qr.png",
-        "assets/images/alipay_qr.png",
         "js/detail_page_enhancer.js",
         "css/detail_page_popover.css"
       ],

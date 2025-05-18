@@ -110,96 +110,24 @@
         supportTitle.textContent = '赞赏支持';
         supportSection.appendChild(supportTitle);
 
-        const paymentIcons = document.createElement('div');
-        paymentIcons.className = 'payment-icons';
-
-        // WeChat
-        const wechatBlock = document.createElement('div');
-        wechatBlock.className = 'payment-icon-block';
-        const wechatImg = document.createElement('img');
+        // 创建外部打赏链接
+        const supportLink = document.createElement('a');
+        supportLink.href = 'https://wjz5788.github.io/donate/';
+        supportLink.target = '_blank';
+        supportLink.className = 'support-link';
+        supportLink.style.display = 'block';
+        supportLink.style.textAlign = 'center';
+        supportLink.style.padding = '10px';
+        supportLink.style.margin = '10px auto';
+        supportLink.style.backgroundColor = '#f8e9a1';
+        supportLink.style.borderRadius = '4px';
+        supportLink.style.color = '#d62828';
+        supportLink.style.fontWeight = 'bold';
+        supportLink.style.textDecoration = 'none';
+        supportLink.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        supportLink.textContent = '❤️ 点击这里打赏支持作者';
         
-        // 尝试加载微信图片
-        try {
-            const wechatImageUrl = chrome.runtime.getURL('assets/images/wechat_qr.png');
-            console.log('[GaoDaoYi] 加载微信收款码图片:', wechatImageUrl);
-            wechatImg.src = wechatImageUrl;
-            wechatImg.onerror = () => {
-                console.error('[GaoDaoYi] 微信收款码图片加载失败');
-                // 图片加载失败时显示占位符
-                wechatImg.style.display = 'none';
-                const placeholder = document.createElement('div');
-                placeholder.className = 'payment-icon-placeholder';
-                placeholder.textContent = '[微信收款码]';
-                wechatBlock.insertBefore(placeholder, wechatLabel);
-            };
-        } catch (e) {
-            console.error('[GaoDaoYi] 获取微信收款码URL时出错:', e);
-            // 显示占位符
-            wechatImg.style.display = 'none';
-            const placeholder = document.createElement('div');
-            placeholder.className = 'payment-icon-placeholder';
-            placeholder.textContent = '[微信收款码]';
-            wechatBlock.insertBefore(placeholder, wechatLabel || null);
-        }
-        
-        wechatImg.alt = '微信收款码';
-        wechatImg.style.width = '80px'; // 适当调整大小，和截图更匹配
-        wechatImg.style.height = 'auto'; // 保持宽高比
-        wechatImg.style.display = 'block';
-        wechatImg.style.margin = '0 auto 5px auto';
-        wechatImg.style.backgroundColor = '#f9f9f9'; // 添加背景色
-        
-        const wechatLabel = document.createElement('div');
-        wechatLabel.className = 'payment-icon-label';
-        wechatLabel.textContent = '微信';
-        wechatBlock.appendChild(wechatImg); 
-        wechatBlock.appendChild(wechatLabel);
-        paymentIcons.appendChild(wechatBlock);
-
-        // Alipay
-        const alipayBlock = document.createElement('div');
-        alipayBlock.className = 'payment-icon-block';
-        const alipayImg = document.createElement('img');
-        
-        // 尝试加载支付宝图片
-        try {
-            const alipayImageUrl = chrome.runtime.getURL('assets/images/alipay_qr.png');
-            console.log('[GaoDaoYi] 加载支付宝收款码图片:', alipayImageUrl);
-            alipayImg.src = alipayImageUrl;
-            alipayImg.onerror = () => {
-                console.error('[GaoDaoYi] 支付宝收款码图片加载失败');
-                // 图片加载失败时显示占位符
-                alipayImg.style.display = 'none';
-                const placeholder = document.createElement('div');
-                placeholder.className = 'payment-icon-placeholder';
-                placeholder.textContent = '[支付宝收款码]';
-                alipayBlock.insertBefore(placeholder, alipayLabel);
-            };
-        } catch (e) {
-            console.error('[GaoDaoYi] 获取支付宝收款码URL时出错:', e);
-            // 显示占位符
-            alipayImg.style.display = 'none';
-            const placeholder = document.createElement('div');
-            placeholder.className = 'payment-icon-placeholder';
-            placeholder.textContent = '[支付宝收款码]';
-            alipayBlock.insertBefore(placeholder, alipayLabel || null);
-        }
-        
-        alipayImg.alt = '支付宝收款码';
-        alipayImg.style.width = '80px'; // 适当调整大小，和截图更匹配
-        alipayImg.style.height = 'auto'; // 保持宽高比
-        alipayImg.style.display = 'block';
-        alipayImg.style.margin = '0 auto 5px auto';
-        alipayImg.style.backgroundColor = '#f9f9f9'; // 添加背景色
-
-        const alipayLabel = document.createElement('div');
-        alipayLabel.className = 'payment-icon-label';
-        alipayLabel.textContent = '支付宝';
-        alipayBlock.appendChild(alipayImg); 
-        alipayBlock.appendChild(alipayLabel);
-        paymentIcons.appendChild(alipayBlock);
-
-        supportSection.appendChild(paymentIcons);
+        supportSection.appendChild(supportLink);
         container.appendChild(supportSection);
 
         // "View Full Details" Button

@@ -624,79 +624,30 @@
     title.textContent = '赞赏支持';
     popoverContainer.appendChild(title);
 
-    const paymentIcons = document.createElement('div');
-    paymentIcons.className = 'payment-icons';
-
-    // 创建图片函数
-    function createPaymentImage(altText, imageUrl, labelText) {
-        const block = document.createElement('div');
-        block.className = 'payment-icon-block';
-        
-        const img = document.createElement('img');
-        try {
-            // 获取扩展资源URL
-            if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getURL) {
-                img.src = chrome.runtime.getURL(imageUrl);
-                console.log('[GaoDaoYi HTML Enhancer] 使用chrome.runtime.getURL获取图片:', imageUrl);
-            } else {
-                // 回退到相对路径
-                img.src = `/${imageUrl}`; 
-                console.log('[GaoDaoYi HTML Enhancer] 使用相对路径获取图片:', imageUrl);
-            }
-        } catch (e) {
-            console.error('[GaoDaoYi HTML Enhancer] 获取图片URL时出错:', e);
-            img.src = `/${imageUrl}`; // 回退到相对路径
-        }
-        
-        img.alt = altText;
-        img.onerror = () => {
-            console.error('[GaoDaoYi HTML Enhancer] 图片加载失败:', imageUrl);
-            
-            // 尝试不同的路径
-            const alternativePaths = [
-                `/${imageUrl}`,
-                imageUrl,
-                imageUrl.replace(/^assets\//, ''),
-                `assets/images/${imageUrl.split('/').pop()}`,
-                `images/${imageUrl.split('/').pop()}`
-            ];
-            
-            console.log('[GaoDaoYi HTML Enhancer] 尝试备用路径:', alternativePaths);
-            
-            let loaded = false;
-            for (const path of alternativePaths) {
-                if (!loaded) {
-                    const tempImg = new Image();
-                    tempImg.onload = function() {
-                        img.src = path;
-                        loaded = true;
-                        console.log('[GaoDaoYi HTML Enhancer] 成功加载图片:', path);
-                    };
-                    tempImg.src = path;
-                }
-            }
-            
-            if (!loaded) {
-                img.style.display = 'none';
-                const placeholder = document.createElement('div');
-                placeholder.className = 'payment-image-placeholder';
-                placeholder.textContent = `[${altText}]`;
-                block.insertBefore(placeholder, img);
-            }
-        };
-        block.appendChild(img);
-
-        const label = document.createElement('div');
-        label.className = 'payment-icon-label';
-        label.textContent = labelText;
-        block.appendChild(label);
-        return block;
-    }
-
-    // 尝试两种可能的路径
-    paymentIcons.appendChild(createPaymentImage('微信收款码', 'assets/images/wechat_qr.png', '微信'));
-    paymentIcons.appendChild(createPaymentImage('支付宝收款码', 'assets/images/alipay_qr.png', '支付宝'));
-    popoverContainer.appendChild(paymentIcons);
+    // 创建打赏链接
+    const supportLink = document.createElement('a');
+    supportLink.href = 'https://wjz5788.github.io/donate/';
+    supportLink.target = '_blank';
+    supportLink.className = 'support-link';
+    supportLink.style.display = 'block';
+    supportLink.style.textAlign = 'center';
+    supportLink.style.padding = '10px';
+    supportLink.style.margin = '10px auto';
+    supportLink.style.backgroundColor = '#f8e9a1';
+    supportLink.style.borderRadius = '4px';
+    supportLink.style.color = '#d62828';
+    supportLink.style.fontWeight = 'bold';
+    supportLink.style.textDecoration = 'none';
+    supportLink.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+    supportLink.textContent = '❤️ 点击这里打赏支持作者';
+    supportLink.onmouseover = () => {
+        supportLink.style.backgroundColor = '#f7d060';
+    };
+    supportLink.onmouseout = () => {
+        supportLink.style.backgroundColor = '#f8e9a1';
+    };
+    
+    popoverContainer.appendChild(supportLink);
 
     const closeButton = document.createElement('button');
     closeButton.id = 'gaodao-yi-popover-close-btn';
@@ -713,7 +664,7 @@
     }
 
     document.body.appendChild(popoverContainer);
-    console.log('[GaoDaoYi HTML Enhancer] 收款码悬浮框已添加');
+    console.log('[GaoDaoYi HTML Enhancer] 打赏链接悬浮框已添加');
 
     // 4. 添加成功加载提示
     const successMessage = document.createElement('div');
