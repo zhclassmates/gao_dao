@@ -110,24 +110,72 @@
         supportTitle.textContent = '赞赏支持';
         supportSection.appendChild(supportTitle);
 
-        // 创建外部打赏链接
-        const supportLink = document.createElement('a');
-        supportLink.href = 'https://wjz5788.github.io/donate/';
-        supportLink.target = '_blank';
-        supportLink.className = 'support-link';
-        supportLink.style.display = 'block';
-        supportLink.style.textAlign = 'center';
-        supportLink.style.padding = '10px';
-        supportLink.style.margin = '10px auto';
-        supportLink.style.backgroundColor = '#f8e9a1';
-        supportLink.style.borderRadius = '4px';
-        supportLink.style.color = '#d62828';
-        supportLink.style.fontWeight = 'bold';
-        supportLink.style.textDecoration = 'none';
-        supportLink.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-        supportLink.textContent = '❤️ 点击这里打赏支持作者';
+        const paymentIcons = document.createElement('div');
+        paymentIcons.className = 'payment-icons';
+
+        // WeChat
+        const wechatBlock = document.createElement('div');
+        wechatBlock.className = 'payment-icon-block';
         
-        supportSection.appendChild(supportLink);
+        // 创建链接
+        const wechatLink = document.createElement('a');
+        wechatLink.href = 'https://wjz5788.github.io/donate/';
+        wechatLink.target = '_blank';
+        wechatLink.className = 'support-link';
+        wechatLink.style.display = 'block';
+        wechatLink.style.width = '80px';
+        wechatLink.style.height = '80px';
+        wechatLink.style.margin = '0 auto 5px auto';
+        wechatLink.style.backgroundColor = '#f8e9a1';
+        wechatLink.style.borderRadius = '4px';
+        wechatLink.style.color = '#d62828';
+        wechatLink.style.fontWeight = 'bold';
+        wechatLink.style.textDecoration = 'none';
+        wechatLink.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        wechatLink.style.textAlign = 'center';
+        wechatLink.style.lineHeight = '80px';
+        wechatLink.textContent = '打赏支持';
+        
+        wechatBlock.appendChild(wechatLink);
+        
+        const wechatLabel = document.createElement('div');
+        wechatLabel.className = 'payment-icon-label';
+        wechatLabel.textContent = '微信';
+        wechatBlock.appendChild(wechatLabel);
+        paymentIcons.appendChild(wechatBlock);
+
+        // Alipay
+        const alipayBlock = document.createElement('div');
+        alipayBlock.className = 'payment-icon-block';
+        
+        // 创建链接
+        const alipayLink = document.createElement('a');
+        alipayLink.href = 'https://wjz5788.github.io/donate/';
+        alipayLink.target = '_blank';
+        alipayLink.className = 'support-link';
+        alipayLink.style.display = 'block';
+        alipayLink.style.width = '80px';
+        alipayLink.style.height = '80px';
+        alipayLink.style.margin = '0 auto 5px auto';
+        alipayLink.style.backgroundColor = '#f8e9a1';
+        alipayLink.style.borderRadius = '4px';
+        alipayLink.style.color = '#d62828';
+        alipayLink.style.fontWeight = 'bold';
+        alipayLink.style.textDecoration = 'none';
+        alipayLink.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        alipayLink.style.textAlign = 'center';
+        alipayLink.style.lineHeight = '80px';
+        alipayLink.textContent = '打赏支持';
+
+        alipayBlock.appendChild(alipayLink);
+        
+        const alipayLabel = document.createElement('div');
+        alipayLabel.className = 'payment-icon-label';
+        alipayLabel.textContent = '支付宝';
+        alipayBlock.appendChild(alipayLabel);
+        paymentIcons.appendChild(alipayBlock);
+
+        supportSection.appendChild(paymentIcons);
         container.appendChild(supportSection);
 
         // "View Full Details" Button
