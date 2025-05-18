@@ -6,12 +6,11 @@
  * @returns {number} 上卦编号
  */
 function calculateShangGua(num1) {
-    if (isNaN(num1) || num1 < 0) {
+    if (isNaN(num1) || num1 < 1 || num1 > 8) {
         console.error(`[计算逻辑] 无效的上卦数字: ${num1}`);
         return 1; // 默认值
     }
-    const remainder = num1 % 8;
-    return remainder === 0 ? 8 : remainder;
+    return num1; // 已经是1-8范围内，直接返回
 }
 
 /**
@@ -20,12 +19,11 @@ function calculateShangGua(num1) {
  * @returns {number} 下卦编号
  */
 function calculateXiaGua(num2) {
-    if (isNaN(num2) || num2 < 0) {
+    if (isNaN(num2) || num2 < 1 || num2 > 8) {
         console.error(`[计算逻辑] 无效的下卦数字: ${num2}`);
         return 1; // 默认值
     }
-    const remainder = num2 % 8;
-    return remainder === 0 ? 8 : remainder;
+    return num2; // 已经是1-8范围内，直接返回
 }
 
 /**
@@ -34,12 +32,11 @@ function calculateXiaGua(num2) {
  * @returns {number} 动爻位置
  */
 function calculateDongYao(num3) {
-    if (isNaN(num3) || num3 < 1) {
+    if (isNaN(num3) || num3 < 1 || num3 > 6) {
         console.error(`[计算逻辑] 无效的动爻数字: ${num3}`);
         return 1; // 默认值
     }
-    const remainder = num3 % 6;
-    return remainder === 0 ? 6 : remainder;
+    return num3; // 已经是1-6范围内，直接返回
 }
 
 /**

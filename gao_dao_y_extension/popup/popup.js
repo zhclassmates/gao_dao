@@ -71,8 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const num2 = parseInt(inputNum2.value);
         const num3 = parseInt(inputNum3.value);
 
-        if (isNaN(num1) || isNaN(num2) || isNaN(num3) || num1 < 0 || num2 < 0 || num3 < 1) {
-            alert('请输入所有有效的数字！动爻数字应大于0。');
+        if (isNaN(num1) || isNaN(num2) || isNaN(num3) || 
+            num1 < 1 || num1 > 8 || 
+            num2 < 1 || num2 > 8 || 
+            num3 < 1 || num3 > 6) {
+            alert('请输入有效范围内的数字！\n上卦和下卦：1-8\n动爻：1-6');
             return;
         }
 
