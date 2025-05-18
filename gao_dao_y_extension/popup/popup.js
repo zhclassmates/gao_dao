@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const previewShangGua = document.getElementById('preview-shang-gua');
     const previewXiaGua = document.getElementById('preview-xia-gua');
     const previewDongYao = document.getElementById('preview-dong-yao');
+    const previewGuaXu = document.getElementById('preview-gua-xu');
     const previewGuaXiang = document.getElementById('preview-gua-xiang');
 
     let currentUserGender = 'male'; // Default
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         previewShangGua.textContent = `${baseDetails.shangGuaInfo} (数: ${n1}→${shangGuaNum})`;
         previewXiaGua.textContent = `${baseDetails.xiaGuaInfo} (数: ${n2}→${xiaGuaNum})`;
         previewDongYao.textContent = `${baseDetails.dongYaoName} (序: ${dongYaoPos})`;
+        previewGuaXu.textContent = `第 ${baseDetails.hexOrder} 卦`;
         previewGuaXiang.textContent = baseDetails.guaMing;
 
         // Fetch Yao Ci (this is async)
