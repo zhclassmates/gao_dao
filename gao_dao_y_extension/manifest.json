@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "高岛易断",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "一款基于《高岛易断》的易经起卦和解卦Chrome扩展。",
   "icons": {
     "16": "icons/icon16.png",
